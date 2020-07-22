@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30309.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPChat", "TPChat\TPChat.csproj", "{6359FBD2-C0D6-46A8-91F9-3C4B572C152F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPChat.Tests", "TPChat.Tests\TPChat.Tests.csproj", "{B3811730-79CD-4EAB-A80C-F1FBBF56D2C6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6359FBD2-C0D6-46A8-91F9-3C4B572C152F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6359FBD2-C0D6-46A8-91F9-3C4B572C152F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6359FBD2-C0D6-46A8-91F9-3C4B572C152F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6359FBD2-C0D6-46A8-91F9-3C4B572C152F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3811730-79CD-4EAB-A80C-F1FBBF56D2C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3811730-79CD-4EAB-A80C-F1FBBF56D2C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3811730-79CD-4EAB-A80C-F1FBBF56D2C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3811730-79CD-4EAB-A80C-F1FBBF56D2C6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7D859406-4F6E-4613-B25C-6B333CEBA48A}
+	EndGlobalSection
+EndGlobal

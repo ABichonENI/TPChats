@@ -3,24 +3,32 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
+using TPChat.DataBase;
+using TPChat.Models;
 
 namespace TPChat.Controllers
 {
+
+    
     public class ChatController : Controller
     {
-        // GET: Chat
+                
+           // GET: Chat
         public ActionResult Index()
         {
-            var chats = new List<Models.Chat> { };
-            
-            return View(chats);
+                       
+            return View(FakeDBCat.Instance.Chats);
         }
 
         // GET: Chat/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            var chat = FakeDBCat.Instance.Chats.FirstOrDefault(c=>c.Id == id);
+            if (chat == null)
+            {
+                return RedirectToAction("Index");
+            }
+            return View(chat);
         }
 
         // GET: Chat/Create
@@ -38,7 +46,12 @@ namespace TPChat.Controllers
         // GET: Chat/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            var chat = FakeDBCat.Instance.Chats.FirstOrDefault(c => c.Id == id);
+            if (chat == null)
+            {
+                return RedirectToAction("Index");
+            }
+            return View(chat);
         }
 
         // POST: Chat/Delete/5
@@ -47,13 +60,13 @@ namespace TPChat.Controllers
         {
             try
             {
-                // TODO: Add delete logic here
-
+                var chat = FakeDBCat.Instance.Chats.FirstOrDefault(c => c.Id == id);
+                FakeDBCat.Instance.Chats.Remove(chat);
                 return RedirectToAction("Index");
             }
             catch
             {
-                return View();
+                return RedirectToAction ("Delete",id);
             }
         }
     }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
+
 namespace TPChat.Controllers
 {
     public class ChatController : Controller
@@ -11,7 +12,9 @@ namespace TPChat.Controllers
         // GET: Chat
         public ActionResult Index()
         {
-            return View();
+            var chats = new List<Models.Chat> { };
+            
+            return View(chats);
         }
 
         // GET: Chat/Details/5
